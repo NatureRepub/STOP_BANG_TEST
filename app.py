@@ -62,7 +62,7 @@ def home():
 
 # 예측 수행
 # 예측 수행
-@app.route('/predict', methods=['POST'])
+@app.route('/result', methods=['POST'])
 def predict():
     try:
         # 요청된 폼 데이터를 출력하여 확인
