@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>로그인</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+        .parent-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .container2 {
+            background-color: rgb(167, 160, 160);
+            padding: 5px 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            color: rgb(32, 83, 187);
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        .login-form {
+            text-align: left;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .note {
+            font-size: 12px;
+            color: #666;
+            text-align: left;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent-container">
+        <div class="container2">
+            <h2>수면무호흡증 질환의 자가진단</h2>
+        </div>
+        <div class="container">
+            <h2>로그인</h2>
+            <form class="login-form" action="/login" method="post">
+                <input type="text" name="username" placeholder="아이디" required>
+                <input type="password" name="password" placeholder="비밀번호" required>
+                <input type="submit" value="로그인">
+            </form>
+            <div class="note">
+                <p>로그인을 하시면 자가진단 서비스를 이용하실 수 있습니다.</p>
+                <p>회원가입, 회원정보수정, ID/PW 찾기는 PC를 통해 홈페이지 접속 후 진행 하실 수 있습니다.</p>
+                <p>처음 진료예약을 하시는 분은 진료상담 후 예약을 이용해 주십시오.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

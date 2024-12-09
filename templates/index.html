@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>STOP-BANG 설문지</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+        .parent-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .container2 {
+            background-color: rgb(167, 160, 160);
+            padding: 5px 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            color: rgb(32, 83, 187);
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            text-align: left;
+        }
+        input[type="radio"] {
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        small {
+            display: block;
+            margin-bottom: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent-container">
+        <div class="container2">
+            <h2>수면무호흡증 질환의 자가진단</h2>
+        </div>
+        <div class="container">
+            <h2>STOP-BANG 설문지</h2>
+            <form action="/predict" method="post">
+                <!-- Snore loudly -->
+                <p>큰 소리로 코를 곤다: 
+                    <input type="radio" name="Snore" value="1"> 예 
+                    <input type="radio" name="Snore" value="0" checked> 아니오
+                    <br>
+                    <small>말하는 것보다 크거나 문을 닫고도 들릴 정도로 큰 소리로 코를 곤 적이 있습니까?</small>
+                </p>
+                
+                <!-- Tired -->
+                <p>낮 동안 피곤하다: 
+                    <input type="radio" name="Tired" value="1"> 예 
+                    <input type="radio" name="Tired" value="0" checked> 아니오
+                    <br>
+                    <small>낮 동안 피곤하거나 피로를 느끼거나 졸린 적이 자주 있습니까?</small>
+                </p>
+                
+                <!-- Apnea -->
+                <p>수면 중 무호흡을 경험했다: 
+                    <input type="radio" name="Apnea" value="1"> 예 
+                    <input type="radio" name="Apnea" value="0" checked> 아니오
+                    <br>
+                    <small>누군가 당신이 자는 동안 숨을 멈추는 것을 관찰한 적이 있습니까?</small>
+                </p>
+                
+                <!-- HTN (High Blood Pressure) -->
+                <p>고혈압이 있다: 
+                    <input type="radio" name="HTN" value="1"> 예 
+                    <input type="radio" name="HTN" value="0" checked> 아니오
+                    <br>
+                    <small>고혈압이 있거나 고혈압으로 치료를 받고 있습니까?</small>
+                </p>
+                
+                <!-- BMI -->
+                <p>체질량지수 (BMI) 35 이상이다: 
+                    <input type="radio" name="BMI" value="1"> 예 
+                    <input type="radio" name="BMI" value="0" checked> 아니오
+                    <br>
+                    <small>체질량지수(BMI)가 35 kg/m² 이상입니까?</small>
+                </p>
+                
+                <!-- Age -->
+                <p>나이가 50세 이상이다: 
+                    <input type="radio" name="Age" value="1"> 예 
+                    <input type="radio" name="Age" value="0" checked> 아니오
+                    <br>
+                    <small>나이가 50세 이상입니까?</small>
+                </p>
+                
+                <!-- Neck circumference -->
+                <p>목둘레가 40cm 이상이다: 
+                    <input type="radio" name="NeckCircumference" value="1"> 예 
+                    <input type="radio" name="NeckCircumference" value="0" checked> 아니오
+                    <br>
+                    <small>목둘레가 40cm 이상입니까?</small>
+                </p>
+                
+                <!-- Sex -->
+                <p>성별: 
+                    <input type="radio" name="Sex" value="1"> 남성 
+                    <input type="radio" name="Sex" value="0" checked> 여성
+                    <br>
+                    <small>당신의 성별은 무엇입니까?</small>
+                </p>
+
+                <div style="text-align: center;">
+                    <input type="submit" value="결과 확인">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

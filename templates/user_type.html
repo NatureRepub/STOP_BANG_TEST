@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원/비회원 선택</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+        .parent-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .container2 {
+            background-color: rgb(167, 160, 160);
+            padding: 5px 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            color: rgb(32, 83, 187);
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .radio-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            align-self: center;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent-container">
+        <div class="container2">
+            <h2>수면무호흡증 질환의 자가진단</h2>
+        </div>
+        <div class="container">
+            <h2>을지대학교병원 자가진단 시작하기</h2>
+            <form action="/user_selection" method="post">
+                <div class="radio-container">
+                    <input type="radio" name="user_type" value="member"> <label>회원</label>
+                </div>
+                <div class="radio-container">
+                    <input type="radio" name="user_type" value="non_member"> <label>비회원</label>
+                </div>
+                <input type="submit" value="다음">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
