@@ -1,0 +1,1 @@
+# STOP_BANG_TEST
